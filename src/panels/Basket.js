@@ -153,7 +153,7 @@ const Basket = ({ match: { params: { areaId, itemId }}, foodAreas, order }) => {
         </Link>
         }
         {
-          !faster && <Link to={`/basket/${area.id}/${item.id}`} className="Place__order">
+          (!time.match(regex) && !faster) && <Link to={`/basket/${area.id}/${item.id}`} className="Place__order">
           Укажите время
           </Link>
         }
